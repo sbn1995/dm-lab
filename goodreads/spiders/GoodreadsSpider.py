@@ -37,7 +37,7 @@ class GoodreadsSpider(scrapy.Spider):
 
             #yield goodreads_item
             if img and not box_set and num_votes > 100:
-                goodreads_item['author'] = response.xpath('//*[@id="bookAuthors"]/span[2]/a[1]/span/text()').extract_first()
+                goodreads_item['author'] = response.xpath('//*[@id="bookAuthors"]/span[2]/div[1]/a/span/text()').extract_first()
                 goodreads_item['name'] = response.xpath('//*[@id="bookTitle"]/text()').extract_first().strip()
                 try:
                     goodreads_item['release_date'] = response.xpath('//*[@id="details"]/div[2]/text()').extract_first().split('\n')[2].strip()
