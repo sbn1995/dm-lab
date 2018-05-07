@@ -54,7 +54,6 @@ def main(argv):
     y_train = column(images.values()[slice:],1)
     x_test = column(images.values()[:slice],0)
     y_test = column(images.values()[:slice],1)
-
     neural_network(x_train,y_train,x_test,y_test)
 
 
@@ -65,9 +64,15 @@ ACHTUNG: UNDER DEVELOPMENT - far from done lmao
 To look at: https://github.com/keras-team/keras/blob/master/examples/mnist_cnn.py
 """
 def neural_network(x_train, y_train, x_test, y_test):
-    model = baseline_model()
-    model.fit(x_train,y_train,validation_data=(x_test, y_test))
-    score = model.evaluate(x_test, y_test, verbose=0)
+
+    # fix random seed for reproducibility
+    seed = 7
+    np.random.seed(seed)
+
+    estimator = KerasRegressor(build_fn=baseline_model, epochs=100, batch_size=5, verbose=0)
+    kfold = KFold(n_splits=10, random_state=seed)
+    results = cross_val_score(estimator, x_train, y_train, cv=kfold)
+    print("Results: %.2f (%.2f) MSE" % (results.mean(), results.std()))
 
 # define base model
 def baseline_model():
@@ -120,21 +125,14 @@ Modifies dictionary with all the ratings per image
 Dict: {image name, (image, rating)}
 """
 def load_ratings(filename,dictionary):
-    """with open(filename) as f:
-        data = json.load(f)
-    df = pd.DataFrame(data)"""
     df = pd.read_json(filename, lines = True)
     for i in range(df.shape[0]):
         rating = df.loc[i,['avg_rating_this_edition']][0]
-        image = df.loc[i,['images']][0]
-        # Some times there is no image
-        if len(image) == 1:
-            image = image[0]['path']
-            slice = image.find('/') + 1
-            dot = image.find('.')
-            image = image[slice:dot]
-            dictionary[image] = [dictionary[image],float(rating)]
-
+        image = df.loc[i,['images']][0][0]['path']
+        slice = image.find('/') + 1
+        dot = image.find('.')
+        image = image[slice:dot]
+        dictionary[image] = [dictionary[image],float(rating)]
 """
  -- No need for this --
 Given two dictionaries:
@@ -151,6 +149,9 @@ def merge_dicts(first, second):
             pass
     return merge
 
+"""
+Return a Numpy Array with the column 'i' of the 'matrix'
+"""
 def column(matrix, i):
     return np.array([row[i] for row in matrix if len(row) == 2])
 
