@@ -1,0 +1,181 @@
+ID	Label	Occurrences	Text
+0	bla	3032761	life world story book time love years man family young author work people lives war american great find stories woman 
+1	Fantasy	112939	magic world fantasy evil dark land king magical power ancient lord die dragon los save quest find kingdom young prince 
+2	Young_Adult	33155	shes school friends girl hes jessica elizabeth high doesnt summer parents friend love girls boy find mother boyfriend life things 
+3	Favorites	35229	una los del las con por les und para como son die sus vida qui des harry une der dans 
+4	Science_Fiction	65373	planet earth science human space fiction alien future galaxy universe die race time les humans novelette los worlds war aliens 
+5	Travel	13636	travel journey guide country travelers places adventure trip account history book travels maps place guides people bryson culture land information 
+6	Humor	7060	hilarious adams guide comic der funny collection dave barry youre und humor jeeves dilbert die bertie food cartoons laugh del 
+7	Adventure	5429	ring der hobbit bilbo tarzan und die baggins tolkiens den lord pitt gandalf middleearth dark great wizard dragon pirate quest 
+8	Classics	113064	edition work literature text works english introduction readers original translation notes books les historical tale editions play classic book published 
+9	Media_Tie_In	16991	jedi star doctor planet captain wars crew luke galaxy skywalker space federation han republic kirk empire mission enterprise universe solo 
+10	Fiction	128611	una los del der die und con las por des les para qui son une sus dans est como von 
+11	Criticism	412	critical criticism che les lart sketch della bibliography scholarly excerpts biographical descriptive annotated masterpieces extensive comprehensive analysis roman overview literary 
+12	Historical	42153	king war los son england battle roman una del queen historical die court con rome las por und der empire 
+13	Nonfiction	96879	book los guide offers una del edition social las information shows history con practical culture health work cultural people including 
+14	Plays	20091	play plays shakespeare edition shakespeares text introduction drama notes theatre comedy stage modern und playwright work der theater english texts 
+15	Christian	19624	god life bible gods book jesus christ study christian heart love spiritual faith women readers christians church personal lives bestselling 
+16	Business	28235	business book management success people companies marketing managers work successful company project guide leadership make shows ideas financial sales practical 
+17	Reference	12720	edition book guide students information reference writing text research dictionary includes web bible language words english features revised internet study 
+18	History	114496	history war american world book account political great century years historical military modern europe narrative states america work men social 
+19	Mystery	126510	murder case killer mystery detective dead police crime found death find finds body murdered woman investigation friend inspector victim shes 
+20	Poetry	40703	poems poetry poet poets work collection book poem published edition english volume american verse poetic language works introduction literature includes 
+21	Childrens	73906	book children books day illustrations story tale school classic big readers friends young time make boy fun house perfect picture 
+22	Sociology	2640	social sociology society work welfare theory sociological students edition cultural book field text analysis bourdieu introduction bourdieus modernity important politics 
+23	Magical_Realism	515	los una del macondo con las pueblo captulos aos como son literatura buendia narra historia familia boca novela haba buenda 
+24	Philosophy	63583	philosophy work book philosophical thought political introduction translation works history edition theory modern human text ideas nature philosophers social important 
+25	Politics	13363	political politics america war american bush president government states power book democracy united iraq economic policy global state chomsky democratic 
+26	Writing	2359	essays collection books literature literary essay reading writing writers pieces los range criticism writer volume subjects kafka sobre coetzee journalism 
+27	Christian_Fiction	4538	faith god series left find hope heart romance determined gods christian tribulation town wife christ cade jesus shes bestselling nicolae 
+28	Romance	77290	love man woman heart shes passion handsome lady hes desire marriage determined beauty life find finds past una home beautiful 
+29	Computer_Science	9528	programming book design software language java code edition development web techniques examples system including programmers patterns learn applications programs youll 
+30	Biography	35343	life biography man years portrait american personal career john political history century figure great president private early hollywood interviews age 
+31	Design	2007	design book designers type web graphic brand information identity process examples guide designer research brands site edition layout typography practical 
+32	Art	19556	art book artists work artist color images works photographs painting paintings short history story photography text illustrations artistic century volume 
+33	Economics	14038	economic economics market financial money book investment theory investing economy edition analysis investors markets stock world work economist business wall 
+34	Sports	2959	baseball training sports game exercise program team fitness players pilates league exercises strength yankees tour body season sport athletes player 
+35	Health	13514	health diet body book weight food program healing medical foods information guide medicine disease eating exercise healthy energy plan eat 
+36	Sequential_Art	42530	comics comic tintin les graphic series volume son dans une batman collects des team manga qui est battle pour strip 
+37	Sports_and_Games	4918	game sports players team coach football golf basketball season baseball professional play sport fans games history pro inside player league 
+38	Thriller	8815	killer reacher thriller agent jack fbi suspense die president der deadly killing rain smoky hes secret murder team terrorist los 
+39	Parenting	12557	parents children child book parenting boys kids baby practical guide childs advice family make sleep work information parent raising offers 
+40	Marriage	1213	marriage couples relationship relationships spouse love boundaries practical intimacy make god gary youll values book understand couple guide marriages biblical 
+41	Religion	56360	book bible god jesus christian spiritual church text work biblical study translation faith life religion world christ religious christianity theology 
+42	Self_Help	12937	life book people success relationships personal practical shows work guide lives make happiness learn change offers author relationship bestselling dont 
+43	Food_and_Drink	25317	recipes food cooking dishes book kitchen cookbook cook ingredients delicious cooks make meals chicken culinary simple recipe foods techniques fresh 
+44	Leadership	2369	leadership leaders leader business maxwell principles people success vision potential john organization organizations stanley relationships practical andy ministry heart talent 
+45	Spirituality	14885	spiritual book life god wisdom healing readers personal energy offers meditation spirit shows soul lives body experience path power world 
+46	Literature	2581	der und die van een una son les del wiesel elie jewish tales por los american zijn den como english 
+47	Drama	2346	shakespeare play plays edition shakespeares othello notes text del theatre oberon oedipus performance henry demetrius hermia helena drama king desdemona 
+48	Short_Stories	15726	stories collection short tales fiction story writers authors una los del und die perspective writer title las der characters des 
+49	Cultural	22256	les des qui une dans est son pas pour par una japanese avec mais sur los elle cest dun del 
+50	None	2359	con los una del systems yang por principles biagio disney dan vida las vinci vantran esta literatura para ini hypnosis 
+51	Language	5417	writing writers book fiction write writer advice creative guide craft process good readers create stories characters practical youll techniques shows 
+52	Science	41602	science book theory physics scientific human universe edition evolution systems quantum text scientists nature understanding students work mathematics modern computer 
+53	Prayer	320	prayer god prayers pray jesus christians fasting gods henri believers outlive yancey praying nouwen bounds scripture essential gothard communion churches 
+54	Sexuality	590	sexual sex energy sexuality techniques women outlet anal spiritual orgasms orgasm taoist lou tips pleasure enlightened intimacy enhance practices practice 
+55	Psychology	22197	psychology book work research social psychological edition students human people text therapy offers understanding theory experience life relationships behavior practical 
+56	Horror	23181	horror vampire stories evil los terror dark una stephen king house terrifying dead ghost short night del por lovecraft vampires 
+57	Productivity	43	productivity sally commitments reclaim microsoft management rebalancing outlook enewsletter efficiency programs anythingwith productivityat mcghee interruptions ineffectiveness productively coach 
+58	Holiday	2570	christmas holiday tree santa season story claus gift eve true family night perfect favorite beloved year illustrations spirit meaning mrs 
+59	Education	8297	students teachers education book learning teaching reading school classroom children teacher educational practical educators schools research edition writing parents work 
+60	War	3237	war military combat force marines vietnam forces unit special battle account iraq operations men history air soldiers marine enemy navy 
+61	Christianity	1055	catholic church faith christ christian god jesus spiritual hahn theology christians doctrines understanding catholicism gospel evangelism pope weigel disciples saints 
+62	Womens_Fiction	14391	shes life job friends boyfriend love perfect married big find husband mother wedding suddenly bridget girl doesnt friend isnt sexy 
+63	Music	17253	music rock band musical book history songs beatles biography album pop early musicians roll stones bands interviews punk guitar blues 
+64	Novels	2594	una der les yang und dan los pour mereka une die por dans son gary lui qui las cooper heller 
+65	Autobiography	5296	memoir family mother childhood daughter father funny honest linda moving son hilarious augusten book living extraordinary depression age mothers intimate 
+66	Esoterica	826	astrology signs che astrological fulcanelli zodiac della del sign astrologer nel chart gloriae canseliet finis mundi horoscope sia delle benefit 
+67	Anthologies	381	novelette chandler simon robert vampire marlowe raymond vampires quarterlies charlaine sensual gaelen lustbader valin estleman crais paretsky sookie lori djinn 
+68	European_Literature	13532	una los del die der und las por con den von para een che como novela des sus eine van 
+69	Culture	3873	film films cinema movies director directors hollywood edition art movie filmmakers studies cultural book original sound made classic work important 
+70	Crafts	2767	knitting patterns knitters projects techniques instructions knit yarn designs book stitches sweaters sewing stitch crochet sweater easy pattern guide lace 
+71	Nurses	257	nursing drugs care includes health students ecgs delegation pathophysiology clinical data cdrom numerous examination patients edition medicalsurgical assessment package articles 
+72	Adult_Fiction	1461	erotic shes abby sexual sexy pleasure hot sensual sex shane francesca desires und hija una explicit con candy steamy sin 
+73	Lgbt	673	gay lesbian sex los manny aurin malone por una transgendered lissa kenney felice toda para shaftal picano orgasms keats con 
+74	Animals	4432	dog dogs horse horses animal animals cats wild training pony cat race owners saddle canine behavior club story alec people 
+75	Feminism	3390	women feminist womens feminism black movement gender social politics theory culture rights issues political sex studies reproductive feminists woman essays 
+76	Gardening	1230	garden gardening plants plant gardeners gardens grow organic gardener food growing permaculture tips planting vegetables flowers combinations advice guide vegetable 
+77	Paranormal	2255	vampire vampires blood lestat anne rice mayfair dead undead shes dracula marius saintgermain slayer vlad rices betsy count dark quinn 
+78	Gender	147	gender gendered transsexual ftm transgendered reassignment thorne hierarchical racially analysis kimmel workbook racism surgerythe sexreassignment experiencesincluding othersenable gendervariant peopleas socialscience 
+79	Glbt	629	gay queer lesbian gender dar reece mainstream kerry sara performance califia jaime kate coyote reichen toni sexuality identity syrah rayann 
+80	Pulp	22	doc bronze genghis skulllined coadventurers docs orban alla regions 
+81	Academic	764	text cid students theories lincoln marketing supply chain health heroic takes loman willy platos salesman spanish sermo strategic selfdeluding usefulness 
+82	Apocalyptic	13	rourke catania trappers eapons manbeasts handcopied humanityfrom settlementand beam 
+83	Contemporary	575	una lydia skinner kibby hunky gospel kate face con stranger seduction che gossip boyfriend find ultracompromising sportsand lovebut sutters afterhours 
+84	Gothic	167	decima faces lovel caliph ruthven marianne till gothic inherit tone estates vathek zastrozzi eblis miscreant prostrate beheld radcliffes unshocked walpoles 
+85	Asian_Literature	2155	japanese die bir yang dan und sumire istanbul galip kemal der los una miu kanji engkau dalam bisa tidak btn 
+86	Games	2194	game chess players rules games magic play information dungeon book including roleplaying characters character complete masters classes revised dragons includes 
+87	Unfinished	16	vollmann excuses strategists zembla scrutinizing sevenvolume zones 
+88	Humanities	2113	language english students grammar languages linguistics edition book introduction exercises words level latin study speech text linguistic vocabulary gender field 
+89	World_War_II	796	holocaust auschwitz jews nazis ghetto camp diary poland camps concentration nazi survived wiesels prisoner aharon deportation europe korczak austerlitz warsaw 
+90	Occult	1040	magic tarot system magical occult dawn cards golden techniques learn practice rituals occultism enochian magick crowley practical knowledge deck instructions 
+92	Erotica	30	mardi gras mia bottoms tops depicitons dossie bottoming maskuntil lapthorne tys liszt sms arouses fourman brewer motivates 
+93	Crime	4677	murder crime killer police case serial true crimes story investigation criminal killers murders john victims account years investigators evidence trial 
+94	Anthropology	1713	anthropology social anthropologist study cultural development societies fieldwork les cultures text field students anthropological western science primitive physical analysis anthropologists 
+95	Combat	751	martial arts karate fighting techniques zen master samurai art japanese training practice combat ninja warrior writings takuan karatedo kata japan 
+96	Environment	522	natural species wilderness plants environmental songbirds tigers environment olson scientific habitat siberian tiger alaska sustainability muir conservation plant researchers mushroom 
+97	Football	226	football weis soccer brazil bellos maradona parcells brazilian flamboyance brazilians extensively players teams burns backlands garrincha gazza morbo footballing jets 
+98	Dungeons_and_Dragons	1246	realms dragonlance forgotten krynn trilogy dragon setting title dragons series magic faerun ogre wizards monsters saga anthology evil greenwood thompson 
+99	Westerns	3728	man west men frontier land sackett texas smoke gold louis lamour town western apache big war blood young indians dead 
+100	Superheroes	82	hulk reborn galactus xmen nextwave inque superskrull ryker winchester doom whew superheroesfightingexplosionsexavengersfinfangfoomgiantflyingsubmarinemonstrositiesformerxforcebabeexplosionskickingmachinemanpunchinggiantevilcoprobotshotenglishchicksecretterroristorganization shazam earhts kesel ostrander stainsbut blightfightin statusthe craptacular 
+101	Transport	79	riders riding motorcycles motorcycle rider vehicles houghs highperformance proficient cornering motorcycling goldbug diagrams safer idiots sportbike motorcyclesthis throttle braking speedster 
+102	Audiobook	47	casanova dyer wayne cristo piombi sanssouci crebillon fontenelle dux cahteau ofgood hurwitz frya oxfordbound maddstone fontainebleau blas sidelights intriguingly brownewill 
+103	Architecture	1872	architecture design architectural building architects buildings houses architect contemporary edition traditional features photographs illustrated materials drawings graphic homes landscape planning 
+104	Buddhism	63	zen kapleau wetering yamada enlightenmentroshi zenteaching buddhisms koan pillars overview kjolhede bodhin buddhisman masamichi roshis enomiyalasalle maezumi taizan jiun kubota 
+105	Textbooks	3404	text students edition project chapter examples concepts management design coverage book business applications authors learning systems chapters theory practice includes 
+106	Science_Fiction_Fantasy	81	marak ilas die ila oburan cherryh awoke nicht von qualitten hindern enttuschten deutlicher schade halben vorsicht sammlung ausgesprochen erwartungen buches 
+107	Category_Romance	388	con jake mckaslin luciano alexa katrina giovanni nuevo era haba rafaelle merlina sheikh elisa leandros nicos kerry resume reece antonia 
+108	Manga	6	tohrus fujishima takahisa tohru 
+109	Comics	57	paranormal knowbokov spiderman batman venom octopus superpowered paranormals takayasu discernable codename supergenius waid symbiote ccrc destabilize shockwave spidey spidermans superheroine 
+110	Urban	183	streets kira celeste keisha terrance ceazia jamal keiths ricky hustle nikki jah louloc tressa rahlo travis selina ghetto keith keyshawn 
+111	Military	40	rennell nichol division bomber aeroscouts aviators emblazoned ranged patch longevitys combatexperiences thesepilots theperfect hellthis infrantry risner mansteins manstein viet helplessley 
+112	New_York	3	outofthe bronxthis boroughs 
+113	Finance	163	accounting cycle akuntansi buku yang textbook mahasiswa untuk cram ini outlines dan statement practice konsepkonsep konsolidasi keuangan telah kuliah dengan 
+114	Realistic_Fiction	709	grade mallory school joey ida kid shes und dad fourth shell maddie lucky mom kids der zinkoff zookeeper sixth die 
+115	Alcohol	420	wine beer beers wines maps robinson production regions grape atlas hugh jancis bottles tasting brewing andrea belgian bottle taste tastes 
+116	Biology	65	dawkins nii monod genomics eessnast nimekaimus mtilises poeesiat rohkem palju eevas mitokondriaalses eluksitlusest darwinlikust arusaam ndisaegne sisaldab mida vrtusele inspireerivale 
+117	Relationships	305	dating los una raunikar relationships boundaries singles healthy las intimacy gente por chrie breaker estn claudia persona relacin pasado han 
+118	Womens	40	shinoda bolen bolens entranable diosa arquetipica feminidad sacredness diversas peregrinar busqueda attitudeimportant selfdefining pinkola sentido grial avalon basado uncannily buscan 
+119	American	37	claybird gabe dogbushes claybirds catts hurstons promisefilled cissie sherley lamothe carby contesting charactersmost adoptiveand expatriated girlwhether sipa sundress honesttogod irresistiblestyle 
+120	Law	895	law legal court cases students justice supreme edition decisions lawyers courts constitutional chief updated process constitution rights international scalia dershowitz 
+121	Military_History	415	war civil gettysburg campaign battle confederate grant battles soldiers lee general shermans chickamauga horwitz lees groom georgia rheas rhea shiloh 
+122	Aviation	61	aviation zahn cobra helicopters halliday vietnam cockpit airbus helicopter regulations flew gann ganns audi flyboy minh retrofitted blackops halfdeserted forfaa 
+123	Spy_Thriller	57	kolb jazmin quiller debriefing spymaster philby kulakovs samson werner alis carrbut spyfrom kolbs khashoggi eastof bedroomsespecially adnan alleyway dawsons copelands 
+124	Folklore	12	shoplifter foaf batterfried toldtwo heardor evanswentz hairdos burdetts seventyplus wolkstein occultists tanning 
+125	North_American_Hi...	42	kukla prisoners mackeys interrogators mackey spains needleman womanresponded teamfour interrogatoruntil kandahar franklinscholar foundersincluding powerall piecewhile territoriespiece themclashing leadersjefferson bagram decisionmakers 
+126	Suspense	95	billys ryan britland rawhead morganna clint hezekiah legal penn labriola breck onenot actons worldis dye schoolfriend brandon hitman theresa rubywell 
+127	Teaching	568	teachers classroom teaching montessori learning reading students writing strategies instruction education language assessment activities improve techniques thinking lillard curriculum linguistics 
+128	Computers	1	mitigation 
+129	Amish	217	amish die wat yoder lancaster leah van melinda nie heartsong nellie caleb gabe met hulle oor mekaar branden ebersol leona 
+130	Disability	47	linton disabilities disability bacb trainees certification guidelines mairs rollsalvador organizewith playand lintons garlandthomson tavris disabilityrightshuman berrigan politic simi guideline codified 
+131	Internet	80	information architecture web sites users intranet folksonomies wellplanned interfaces architects designers technologies intranets thesauri cityroads brochureware metadata fastgrowing topdown scalable 
+132	Lds	203	emily mormon anita lds ariana ryan jess hawkins tamra stansfields stansfield nephites michaels jonathon emilys cake cassi heimerdinger garret tennis 
+133	Northern_Africa	257	egyptian egypt algiers llob mais heru khadra amin pert mobility lui algeria ses est des alahram infitah pseudonyme fearfilled papyri 
+134	Race	119	racial racism inequality minstrel blackface minstrelsy shapiro assets jensen colorism hapas fulbeck preexisting lott systemic evangelicals whiteness workingclass wealthfare accumulationinheritance 
+135	Harlequin	80	shed marcus hed blake justine desired sapphire mistress bed blaketemporarilyto sefton steeled justines cotswolds remarrying besotted glad digger hadnt blakes 
+136	Mythology	132	emily arthurian mermaid mermaids windsnap kessler lancelot oddly liz trident undersea neptune conventiondefying guinevere shipwrecks camelot arthurs swimming perils lures 
+138	Adult	144	thrones skin winterfell starks frozen throne swords products counterplots barters wildlings bastards endeavors epicurean protective massing perilously threw undertakes preternatural 
+139	Space	12	linenger heris korolev outages wernher von lifethreatening 
+140	Medical	186	clinical review usmle pathology medical questions organ concepts basic edition transue cardiac physiology anatomy comprehensive calstar ofri highyield systemic surveying 
+141	Family	22	shepherding federal headsas uncovenantal covenantal headship tripp tedd rehearses fillintheblank esperanzas esperanza buyers abuela application backbone 
+142	Dc_Comics	38	batman grayson masterminding rockandroll fortunate lineart crowes frameupin izaak carrey kidman riddler illustrationfilled hideouts battrivia toxin citizensand petrifies frightand novelization 
+143	Southern_Africa	129	nadine south gordimer africa helen african universities lying des prize awarded cupido gordimers goldmining awareness involvement dissension booker blacks middleclass 
+144	Political_Science	16	interdependence globalism wendt anarchical hurrell sakes unwritten 
+145	Mountaineering	101	climbers twight climbing messner twights mountaineers climber kyrgyzstan annapurna dolomites alpine reinhold bonington altitude summit readersbut siegestyle spinelessness alpinist epilogues 
+146	Inspirational	112	bart manning una lleva nuevo nueva amigo mary vida los decide patrick transmitindonos mostrndonos osito oradores promocionando infundiendo andar enciende 
+147	Roman	520	een van het dat haar lea les del hij met une harry wordt moeder gasten vrouw maar bij niet della 
+148	Love_Inspired	1	presumeddead 
+149	World_Of_Warcraft	10	mmorpg kazzak azuregos qiraj ragefire azeroth bradygames lowlevel ahn pits 
+150	Marvel	84	xmen carnage spiderman kasady shiar pasado ese galaxy creature antimutant arrasadaspiderman colocan sumada acecho convirtiera herotm himselfpeter culpabilidad overconfident impulsan 
+151	Gamebooks	53	thrombey chartwell harlowe para genecomp cuantiosa coac arsnico verti tuvieras eliminarlo averiguaras contart angelaall millionare harloew reupleau sobrino botella herederos 
+152	40k	53	warhammer blood greenskins arkios shira brant imperium marines calpurnia alleni ipaul berviolent adeptus vanqualis agriworlds tempestus segmentum goresplattered militarypowered wargames 
+153	Witchcraft	189	magic witchcraft spells witch youll magick craft divination pagan grimassi wicca witches rituals practices herbs practice moura spellwork wart totem 
+154	Buisness	2	lessthansane webbased 
+155	Labor	4	geoghegan selfevaluation nearfall 
+156	True_Story	32	buru penal pramoedyas toer ananta pramoedya detained solzhenitsyn aleksandr remembrance achievementa memoirreminiscent mutes soliloquy formal resonance managing 
+157	Death	5	cryonically autopsies embalming dismembered donation 
+158	Nature	49	orienteering compass map plants edible beginner arrangedt photographstemptingly includedthis wildhundreds seasonbyseason overwater outdoorspeople orienteers purifiers tarps footwearand navaho quickreference sketching 
+159	Mmorpg	99	les une qui cratures avec monde feu dans des aube connaisse quazeroth danciennes sallier lobliger lentendement conspiration modan khaz envoient 
+160	Beer	76	beer homebrew brewing whiskey equipment recipes wine papazian malt brewers moonshine liqueur tools cappers darned liqueurs fermentation homebrewer kegging lutzen 
+161	Eastern_Africa	22	genocide barnett rwanda rwandan humanitarianism violate uns omission concludes increasingly 
+162	Cities	127	las los del marginacin avanzado desigualdad ciudades tambin estos slo causas sino angelesand epcot cityscapefrom urbanists psuedohistoric megamalls urbanismmanipulative analticas 
+163	Western_Africa	19	ghanas eshun ekow accra ghana ashanti xand pathw elmina parentsembarks africanborn eshunborn ghanaian asante 
+164	Action	23	remo autoworkers chiun destroyer sinanju methodsinto recruitedthrough ratherunusualnew jetskiing scubadiving powerboating lining stats congregants statistical octane actionadventure welloff 
+165	Martial_Arts	1	fightingthe 
+166	Plants	11	lozenges wardwell indigestion tinctures syrups storing cramps allnatural salves plantbased herbal 
+167	Soccer	1	matchday 
+168	Judaism	41	rabbi wolpe wolpes fried judaism har herber vigorousminded threedaysayear zions readerinto renownbut sermonizer rabbiand mitzvahs rsums goers rabbinical oneyear philadelphias 
+170	Biblical_Fiction	2	nimrod nimrrada 
+171	Church	2	noll 
+172	Lesbian	5	marcys lightningsize chaperones livs 
+173	Wildlife	4	sivanipalli kumaon corbetts starlit 
+174	Literary_Fiction	18	madeleine jarvis madeleines margot revolutionarys complaisant lumpier nuestra tending 
+175	Shapeshifters	2	maris 
+176	Graphic_Novels_Comics	2	elihu cartooning 
+177	Medievalism	8	abrams tendency causally secularized deepened 
+178	Mathematics	15	thousandandonenights smullyan puzzles scheherazade modules brainteaser helpinghand wavelets truefalse coercive 
+179	Jewellery	10	sanding scrapers stonesetting metalworkers clasps hardness spiralbound pliers gem professionals 
+181	United_States	3	junkfilled lyin stealin 
+182	Biography_Memoir	5	birthing pharmacopeia ninetyoneyearold 
+183	Engineering	7	circuits pwm modulation converters multidisciplinary vector 

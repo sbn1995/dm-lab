@@ -1,0 +1,51 @@
+avg_rating_all_editions_5 7409		bible study translation niv version original features maps text biblical 					god word notes jesus scholars readers english gods international christ
+
+avg_rating_all_editions_4 712348 	world war story life history american years man time people men power 							great book human political america young death powerful 
+
+avg_rating_all_editions_3 43045 	world war american young city political man america story years time men 					power london people group death human secret century 
+
+avg_rating_all_editions_2 98 		nathan esswood adle ambitions seneschal governess rochestersearches 							guardianeven parisand itquite varens charactersadle luminosityas 							brightens repeatinghowever episcopalian civilto welcomingor alnombak 							brightonfield
+
+num_votes_all_editions_1000000 15267	harry story hogwarts life potter ring lord love dark dorian world 							edition young time evil years tale classic school wildes 
+
+num_votes_all_editions_100000 28228	world adventure book story tale young life years holmes classic evil 					beautiful love stephanie narnia read family edition sea island
+
+num_votes_all_editions_10000 53583	man killer secret world murder life time death hes evil agent jack 							dangerous find mysterious deadly finds game dead woman 
+
+num_votes_all_editions_1000 93050	man secret find murder dead death dark world killer truth mystery crime 					mysterious back woman secrets deadly case life wife 
+
+num_votes_all_editions_100 153579	book edition students guide text information readers offers includes 					make including comprehensive work practical updated techniques learn 					chapter features research 
+
+added_by_all_editions_10000000	822 	harry hogwarts hes wizarding relatives magical evil life world parents 					wizardry stairs letter secret miserable survived powers school wizard 					boy
+ 
+added_by_all_editions_1000000	16573 	story jane love classic characters literature great life austens 					childhood frank published tale novels edition beautiful young english 					romantic written 
+
+added_by_all_editions_100000	27953 	story young life human classic published tale english world science 					society magic journey literature man work readers years anne french 
+
+added_by_all_editions_10000	47189 	story love tale young life beautiful world woman classic characters 					readers father son queen century king london girl prince man 
+
+added_by_all_editions_100	24144 	michael david stories nancy robert shortstory american mike detective 					takes west james texas scott murder series poker jim john hank 
+
+Fiction 95607 		story love life family world young american characters tale lives woman set novels 					fiction writer town funny wife comic author 
+
+Mystery 92732 		murder case mystery detective killer dead crime police found death body finds series 			murdered investigation young woman find inspector victim 
+
+Fantasy 92579 		world magic fantasy evil dark land king power magical ancient young dragon time lord 			quest adventure kingdom find save powers 
+
+History 57884 		history war american world account political great century years europe historical book 			historian military narrative empire events ancient fascinating modern
+ 
+Science_Fiction 54346 	planet earth human science space future fiction world alien time galaxy universe years 			race humans worlds aliens man mars war
+ 
+Classics 53751 		work edition text works literature introduction notes historical play books english 			readers original plays editions classic translation tale shakespeares part 
+
+Childrens 50260 	book children story books tale illustrations day readers classic young fun bear big 			picture perfect school time boy color make 
+
+Nonfiction 49483 	book women life people personal shows offers children years lives food health world 			stories fascinating make memoir guide reveals wisdom 
+
+Romance 48555 		man love woman heart passion handsome desire lady beauty shes marriage determined 			beautiful lord eyes dangerous arms shed knew hes 
+
+Young_Adult 20449 	school shes friends elizabeth jessica high girl summer parents girls friend doesnt hes 			wakefield boyfriend love things make boy life 
+
+Food_and_Drink 23185 	recipes food cooking dishes kitchen cookbook cook book delicious ingredients cooks home 			meals chicken culinary recipe make simple foods fresh 
+
+Sports_and_Games 4948 	game sports players team coach football golf basketball season baseball professional 			fans play sport games story inside pro athlete player
