@@ -12,10 +12,10 @@ import tensorflow as tf
 import cv2
 
 """
-Simple Convolutional Neural Network for classification of the rating
+Simple Convolutional Neural Network for regression of the rating
 
 Usage:
-    - Have in the same folder: CNN_ratings.py, preprocess.py, .jl file and folder 'full' with all images
+    - Have in the same folder: CNN_regression.py, preprocess.py, .jl file and folder 'full' with all images
     - Execute --> python CNN_ratings.py --json_file <.jl file name (without extension)> --image_size <image size wanted> > results.txt
 
 It is important the part '> results.txt' since the results are displaied on console, which i think
@@ -26,17 +26,15 @@ Parameters as batch_size, learning_rate or number of epochs must be changed manu
 """
 
 FLAGS = None
-classes = [3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.1, 4.2, 4.3, 4.4, 4.5]
-num_classes = len(classes)
 
 # CNN parameters
-batch_size = 10000
+batch_size = 1000
 learning_rate = 0.001
 validation_size = 0.2
-epochs = 100
+epochs = 10
 
 # Image properties
-img_size = 150
+img_size = 28
 num_channels = 3
 
 """
@@ -45,8 +43,8 @@ Print progress of the network Training
 def show_progress(epoch, feed_dict_train, feed_dict_validate, val_loss, sess, accuracy):
     acc = sess.run(accuracy, feed_dict=feed_dict_train)
     val_acc = sess.run(accuracy, feed_dict=feed_dict_validate)
-    msg = "Training Epoch {0} --- Training Accuracy: {1:>6.1%}, Validation Accuracy: {2:>6.1%},  Validation Loss: {3:.3f}"
-    print(msg.format(epoch + 1, acc, val_acc, val_loss))
+    print "Training Epoch "+str(epoch + 1)+" --- Training Accuracy: "+str(acc)+", Validation Accuracy: "+str(val_acc)+",  Validation Loss: "+str(val_loss)
+    #print(msg.format(epoch + 1, acc, val_acc, val_loss))
 
 """
 @parameters
@@ -94,7 +92,7 @@ def conv_net(input_layer):
     dropout = tf.layers.dropout(inputs=dense, rate=0.4)
 
     # Logits Layer
-    logits = tf.layers.dense(inputs=dropout, units=len(classes))
+    logits = tf.layers.dense(inputs=dropout, units=1)
     return logits
 
 """
@@ -109,6 +107,7 @@ def load_train_photos(df):
         try:
             im_path = df.loc[i,['images']][0][0]['path']
             rating = df.loc[i,['avg_rating_this_edition']][0]
+
             image = cv2.imread(im_path)
             #image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
@@ -121,10 +120,7 @@ def load_train_photos(df):
             images.append(image)
 
             # Create label's array and asign it to the desired class
-            index = classes.index(round(rating,1))
-            label = np.zeros(len(classes))
-            label[index] = 1.0
-            labels.append(label)
+            labels.append([rating])
         except:
             pass
 
@@ -142,22 +138,20 @@ def load_train_photos(df):
     return images[idx:], labels[idx:], images[:idx], labels[:idx]
 
 def main(_):
-    global batch_size, img_size
+    global batch_size. img_size
 
     file_path = FLAGS.json_file
-    file_path_clean = file_path + "_clean_rating"
+    file_path_clean = file_path + "_clean_regression"
     store = pd.HDFStore(file_path_clean + '.h5')
-
-    # Execute this just once!
+    # Execute this two just once!
     df = pr.read_goodreads(file_path)
     #pr.clean_description(df, store)
-    pr.clean_ratings(file_path)
     #sys.exit()
 
-    # Load clean dataset
-    df = store['df']
+    df = store['df'] #load clean df
+    n_samples = df.shape[0]
+    img_size = FLAGS.image_size
 
-    img_size 0 FLAGS.image_size
     # Load training data
     x_train, y_train, x_val, y_val = load_train_photos(df)
 
@@ -179,24 +173,26 @@ def main(_):
     x = tf.placeholder(tf.float32, shape=[None, img_size,img_size,num_channels], name='x')
 
     # Output layers
-    y_true = tf.placeholder(tf.float32, shape=[None, num_classes], name='y_true')
-    y_true_classes = tf.argmax(y_true, axis=1)
+    y_true = tf.placeholder(tf.float32, shape=[None, 1], name='y_true')
+    #y_true_classes = tf.argmax(y_true, axis=1)
 
     # Convolutional network
     logits = conv_net(x)
 
     # Predictions
-    y_pred_classes = tf.argmax(logits, axis=1)
+    #y_pred_classes = tf.argmax(logits, axis=1)
     y_pred = tf.nn.softmax(logits,name='y_pred')
 
     # Learning parameters
-    cross_entropy = tf.nn.softmax_cross_entropy_with_logits_v2(logits=logits, labels=y_true)
-    cost = tf.reduce_mean(cross_entropy)
+    #cross_entropy = tf.nn.softmax_cross_entropy_with_logits_v2(logits=logits, labels=y_true)
+    cost = tf.reduce_sum(tf.pow(y_pred-y_true, 2))/(2*n_samples)
     optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
-    correct_prediction = tf.equal(y_pred_classes, y_true_classes)
-    accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
+    accuracy = tf.metrics.mean_squared_error(labels=y_true, predictions=logits)
+    #correct_prediction = tf.equal(y_pred_classes, y_true_classes)
+    #accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
     sess.run(tf.global_variables_initializer())
+    sess.run(tf.local_variables_initializer())
     saver = tf.train.Saver()
 
     for i in range(epochs * iterations):
@@ -219,8 +215,8 @@ def main(_):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--json_file', type=str, default='new',
-                      help='File containing the books data')
+    parser.add_argument('--data_dir', type=str, default='train',
+                      help='Directory for storing input data')
     parser.add_argument('--image_size', type=int, default=150,
                       help='Size of the images to train')
     FLAGS, unparsed = parser.parse_known_args()

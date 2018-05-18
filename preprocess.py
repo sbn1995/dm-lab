@@ -22,6 +22,21 @@ def read_goodreads(file_path):
     df = pd.read_json(file_path + ".jl", lines = True)
     return df
 
+"""
+This method should remove from the dataset all books not belonging to one of the genres listed
+"""
+def clean_genres(df, store):
+    classes = ['Classics','Sequential Art','Science Fiction','Mystery','Fiction','History','Fantasy','Nonfiction','Historical','Childrens']
+    pass
+
+"""
+This method should remove from the dataset all books not belonging to one of the ratings listed
+"""
+def clean_ratings(df, store):
+    classes = [3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.1, 4.2, 4.3, 4.4, 4.5]
+    # round(rating,1) to use just one floating point
+    pass
+
 
 def clean_description(df, store):
     """converts all lists of strings in descriptions to a string"""

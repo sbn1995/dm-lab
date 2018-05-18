@@ -12,11 +12,11 @@ import tensorflow as tf
 import cv2
 
 """
-Simple Convolutional Neural Network for classification of the rating
+Simple Convolutional Neural Network for classification of the genre
 
 Usage:
-    - Have in the same folder: CNN_ratings.py, preprocess.py, .jl file and folder 'full' with all images
-    - Execute --> python CNN_ratings.py --json_file <.jl file name (without extension)> --image_size <image size wanted> > results.txt
+    - Have in the same folder: CNN_genres.py, preprocess.py, .jl file and folder 'full' with all images
+    - Execute --> python CNN_genres.py --json_file <.jl file name (without extension)> --image_size <image size wanted> > results.txt
 
 It is important the part '> results.txt' since the results are displaied on console, which i think
 is not shown on mogon.
@@ -26,7 +26,8 @@ Parameters as batch_size, learning_rate or number of epochs must be changed manu
 """
 
 FLAGS = None
-classes = [3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.1, 4.2, 4.3, 4.4, 4.5]
+# Using just top 10 genres, to try with all genres, all of them should be listed here (and not delete them while cleaning)
+classes = ['Classics','Sequential Art','Science Fiction','Mystery','Fiction','History','Fantasy','Nonfiction','Historical','Childrens']
 num_classes = len(classes)
 
 # CNN parameters
@@ -108,7 +109,8 @@ def load_train_photos(df):
     for i in range(df.shape[0]):
         try:
             im_path = df.loc[i,['images']][0][0]['path']
-            rating = df.loc[i,['avg_rating_this_edition']][0]
+            genre = df.loc[i,['top_genre']][0]
+
             image = cv2.imread(im_path)
             #image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
@@ -121,7 +123,7 @@ def load_train_photos(df):
             images.append(image)
 
             # Create label's array and asign it to the desired class
-            index = classes.index(round(rating,1))
+            index = classes.index(genre)
             label = np.zeros(len(classes))
             label[index] = 1.0
             labels.append(label)
@@ -145,13 +147,13 @@ def main(_):
     global batch_size, img_size
 
     file_path = FLAGS.json_file
-    file_path_clean = file_path + "_clean_rating"
+    file_path_clean = file_path + "_clean_genres"
     store = pd.HDFStore(file_path_clean + '.h5')
 
     # Execute this just once!
     df = pr.read_goodreads(file_path)
     #pr.clean_description(df, store)
-    pr.clean_ratings(file_path)
+    pr.clean_genres(file_path)
     #sys.exit()
 
     # Load clean dataset
