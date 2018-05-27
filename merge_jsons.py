@@ -1,7 +1,7 @@
 #Run this to merge the files from different download sessions
 #The files should be in a 'data' folder and will be returned as 'final'
 import glob
-from os import listdir
+import os
 
 GD_PATH = '.\data'
 OUTPUT_NAME = input("Output file name (without .jl extension)? : ") + '.jl'

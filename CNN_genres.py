@@ -5,7 +5,7 @@ import sys
 
 import numpy as np
 import pandas as pd
-from os import listdir
+from os import listdir, path
 import random
 
 import tensorflow as tf
@@ -108,7 +108,9 @@ def load_train_photos(df):
 
     for i in range(df.shape[0]):
         try:
-            im_path = df.loc[i,['images']][0][0]['path']
+            #TODO: this path isnt correct anymore. get the real path by trying the folders in 'data'
+            #im_path = df.loc[i,['images']][0][0]['path']
+            im_path = pr.get_image_path(i, df)
             genre = df.loc[i,['top_genre']][0]
 
             image = cv2.imread(im_path)
@@ -147,19 +149,23 @@ def main(_):
     global batch_size, img_size
 
     file_path = FLAGS.json_file
-    file_path_clean = file_path + "_clean_genres"
-    store = pd.HDFStore(file_path_clean + '.h5')
+
+    #file_path_clean = file_path + "_clean_genres"
+    #store = pd.HDFStore(file_path_clean + '.h5')
 
     # Execute this just once!
-    df = pr.read_goodreads(file_path)
+    #df = pr.read_goodreads(file_path)
     #pr.clean_description(df, store)
-    pr.clean_genres(file_path)
+    #pr.clean_genres(file_path)
     #sys.exit()
 
     # Load clean dataset
-    df = store['df']
+    #df = store['df']
 
-    img_size 0 FLAGS.image_size
+    #set first_time = True if the .h5 file hasn't been created yet
+    df = pr.get_df_cleaned(path.join("data", file_path), first_time = False, filter_genre = True)
+
+    img_size = FLAGS.image_size
     # Load training data
     x_train, y_train, x_val, y_val = load_train_photos(df)
 
@@ -198,6 +204,14 @@ def main(_):
     correct_prediction = tf.equal(y_pred_classes, y_true_classes)
     accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
+    #Define Tensorboard nodes
+    tf.summary.scalar("cost", cost)
+    tf.summary.scalar("accuracy", accuracy)
+    summary_op = tf.summary.merge_all()
+    writer_train = tf.summary.FileWriter("./models/genre/log_train", graph=tf.get_default_graph())
+    writer_test = tf.summary.FileWriter("./models/genre/log_test", graph=tf.get_default_graph())
+
+
     sess.run(tf.global_variables_initializer())
     saver = tf.train.Saver()
 
@@ -210,14 +224,18 @@ def main(_):
         feed_dict_tr = {x: x_batch, y_true: y_batch}
         feed_dict_val = {x: x_val_batch, y_true: y_val_batch}
 
-        sess.run(optimizer, feed_dict=feed_dict_tr)
+        epoch = int(i / int(x_train.shape[0]/batch_size))
+
+        _, summary = sess.run([optimizer, summary_op], feed_dict=feed_dict_tr)
+        # write log
+        writer_train.add_summary(summary, epoch * batch_size + i)
 
         # When one epoch is done, print results
         if i % int(x_train.shape[0]/batch_size) == 0:
-            val_loss = sess.run(cost, feed_dict=feed_dict_val)
-            epoch = int(i / int(x_train.shape[0]/batch_size))
+            val_loss, summary = sess.run([cost, summary_op], feed_dict=feed_dict_val)
+            writer_test.add_summary(summary, epoch * batch_size + i)
             show_progress(epoch, feed_dict_tr, feed_dict_val, val_loss, sess, accuracy)
-            saver.save(sess, './header-model')
+            saver.save(sess, './models/genre/header-model')
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

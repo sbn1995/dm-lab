@@ -5,7 +5,7 @@ import sys
 
 import numpy as np
 import pandas as pd
-from os import listdir
+from os import listdir, path
 import random
 
 import tensorflow as tf
@@ -43,7 +43,7 @@ Print progress of the network Training
 def show_progress(epoch, feed_dict_train, feed_dict_validate, val_loss, sess, accuracy):
     acc = sess.run(accuracy, feed_dict=feed_dict_train)
     val_acc = sess.run(accuracy, feed_dict=feed_dict_validate)
-    print "Training Epoch "+str(epoch + 1)+" --- Training Accuracy: "+str(acc)+", Validation Accuracy: "+str(val_acc)+",  Validation Loss: "+str(val_loss)
+    print("Training Epoch "+str(epoch + 1)+" --- Training Accuracy: "+str(acc)+", Validation Accuracy: "+str(val_acc)+",  Validation Loss: "+str(val_loss))
     #print(msg.format(epoch + 1, acc, val_acc, val_loss))
 
 """
@@ -138,9 +138,10 @@ def load_train_photos(df):
     return images[idx:], labels[idx:], images[:idx], labels[:idx]
 
 def main(_):
-    global batch_size. img_size
+    global batch_size, img_size
 
     file_path = FLAGS.json_file
+    """
     file_path_clean = file_path + "_clean_regression"
     store = pd.HDFStore(file_path_clean + '.h5')
     # Execute this two just once!
@@ -149,6 +150,10 @@ def main(_):
     #sys.exit()
 
     df = store['df'] #load clean df
+    """
+    #set first_time = True if the .h5 file hasn't been created yet
+    df = pr.get_df_cleaned(path.join("data", file_path), filter_rating = False)
+
     n_samples = df.shape[0]
     img_size = FLAGS.image_size
 
@@ -191,6 +196,13 @@ def main(_):
     #correct_prediction = tf.equal(y_pred_classes, y_true_classes)
     #accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
+    #Define Tensorboard nodes
+    tf.summary.scalar("cost", cost)
+    tf.summary.scalar("MSE", accuracy)
+    summary_op = tf.summary.merge_all()
+    writer_train = tf.summary.FileWriter("./models/regression/log_train", graph=tf.get_default_graph())
+    writer_test = tf.summary.FileWriter("./models/regression/log_test", graph=tf.get_default_graph())
+
     sess.run(tf.global_variables_initializer())
     sess.run(tf.local_variables_initializer())
     saver = tf.train.Saver()
@@ -204,18 +216,21 @@ def main(_):
         feed_dict_tr = {x: x_batch, y_true: y_batch}
         feed_dict_val = {x: x_val_batch, y_true: y_val_batch}
 
-        sess.run(optimizer, feed_dict=feed_dict_tr)
+        epoch = int(i / int(x_train.shape[0]/batch_size))
+        _, summary = sess.run([optimizer, summary_op], feed_dict=feed_dict_tr)
+        # write log
+        writer_train.add_summary(summary, epoch * batch_size + i)
 
         # When one epoch is done, print results
         if i % int(x_train.shape[0]/batch_size) == 0:
-            val_loss = sess.run(cost, feed_dict=feed_dict_val)
-            epoch = int(i / int(x_train.shape[0]/batch_size))
+            val_loss, summary = sess.run([cost, summary_op], feed_dict=feed_dict_val)
+            writer_test.add_summary(summary, epoch * batch_size + i)
             show_progress(epoch, feed_dict_tr, feed_dict_val, val_loss, sess, accuracy)
-            saver.save(sess, './header-model')
+            saver.save(sess, './models/regression/header-model')
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data_dir', type=str, default='train',
+    parser.add_argument('--json_file', type=str, default='train',
                       help='Directory for storing input data')
     parser.add_argument('--image_size', type=int, default=150,
                       help='Size of the images to train')
