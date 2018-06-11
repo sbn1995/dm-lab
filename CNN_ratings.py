@@ -30,7 +30,7 @@ classes = [3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.1, 4.2, 4.3,
 num_classes = len(classes)
 
 # CNN parameters
-batch_size = 10000
+batch_size = 64
 learning_rate = 0.001
 validation_size = 0.2
 epochs = 100
@@ -107,9 +107,11 @@ def load_train_photos(df):
 
     for i in range(df.shape[0]):
         try:
-            im_path = df.loc[i,['images']][0][0]['path']
+            #im_path = df.loc[i,['images']][0][0]['path']
+            im_path = pr.get_image_path(i, df)
             rating = df.loc[i,['avg_rating_this_edition']][0]
             image = cv2.imread(im_path)
+
             #image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
             # Reshape image and transform values to 0-1 scale
@@ -204,8 +206,8 @@ def main(_):
     tf.summary.scalar("cost", cost)
     tf.summary.scalar("accuracy", accuracy)
     summary_op = tf.summary.merge_all()
-    writer_train = tf.summary.FileWriter("./models/genre/log_train", graph=tf.get_default_graph())
-    writer_test = tf.summary.FileWriter("./models/genre/log_test", graph=tf.get_default_graph())
+    writer_train = tf.summary.FileWriter("./models/rating/log_train", graph=tf.get_default_graph())
+    writer_test = tf.summary.FileWriter("./models/rating/log_test", graph=tf.get_default_graph())
 
 
     sess.run(tf.global_variables_initializer())
@@ -231,7 +233,7 @@ def main(_):
             val_loss, summary = sess.run([cost, summary_op], feed_dict=feed_dict_val)
             writer_test.add_summary(summary, epoch * batch_size + i)
             show_progress(epoch, feed_dict_tr, feed_dict_val, val_loss, sess, accuracy)
-            saver.save(sess, './models/ratings/header-model')
+            saver.save(sess, './models/rating/header-model')
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

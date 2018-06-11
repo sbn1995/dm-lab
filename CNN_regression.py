@@ -28,7 +28,7 @@ Parameters as batch_size, learning_rate or number of epochs must be changed manu
 FLAGS = None
 
 # CNN parameters
-batch_size = 1000
+batch_size = 64
 learning_rate = 0.001
 validation_size = 0.2
 epochs = 10
@@ -105,7 +105,8 @@ def load_train_photos(df):
 
     for i in range(df.shape[0]):
         try:
-            im_path = df.loc[i,['images']][0][0]['path']
+            #im_path = df.loc[i,['images']][0][0]['path']
+            im_path = pr.get_image_path(i, df)
             rating = df.loc[i,['avg_rating_this_edition']][0]
 
             image = cv2.imread(im_path)
@@ -139,7 +140,6 @@ def load_train_photos(df):
 
 def main(_):
     global batch_size, img_size
-
     file_path = FLAGS.json_file
     """
     file_path_clean = file_path + "_clean_regression"
@@ -186,19 +186,21 @@ def main(_):
 
     # Predictions
     #y_pred_classes = tf.argmax(logits, axis=1)
-    y_pred = tf.nn.softmax(logits,name='y_pred')
+    #y_pred = tf.nn.softmax(logits,name='y_pred')
+    y_pred = logits
 
     # Learning parameters
     #cross_entropy = tf.nn.softmax_cross_entropy_with_logits_v2(logits=logits, labels=y_true)
     cost = tf.reduce_sum(tf.pow(y_pred-y_true, 2))/(2*n_samples)
     optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
     accuracy = tf.metrics.mean_squared_error(labels=y_true, predictions=logits)
+    #print("ACCURACY!!::",accuracy)
     #correct_prediction = tf.equal(y_pred_classes, y_true_classes)
     #accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
     #Define Tensorboard nodes
     tf.summary.scalar("cost", cost)
-    tf.summary.scalar("MSE", accuracy)
+    #tf.summary.scalar("MSE", accuracy)
     summary_op = tf.summary.merge_all()
     writer_train = tf.summary.FileWriter("./models/regression/log_train", graph=tf.get_default_graph())
     writer_test = tf.summary.FileWriter("./models/regression/log_test", graph=tf.get_default_graph())

@@ -31,9 +31,10 @@ classes = ['Classics','Sequential Art','Science Fiction','Mystery','Fiction','Hi
 num_classes = len(classes)
 
 # CNN parameters
-batch_size = 10000
+batch_size = 64
 learning_rate = 0.001
 validation_size = 0.2
+testing_size = 0.2
 epochs = 100
 
 # Image properties
@@ -89,7 +90,6 @@ def conv_net(input_layer):
       activation=tf.nn.relu)
     pool2 = tf.layers.max_pooling2d(inputs=conv2, pool_size=[2, 2], strides=2)
 
-
     # Dense Layer
     pool2_flat = tf.reshape(pool2, [tf.shape(pool2)[0], pool2.shape[1] * pool2.shape[2] * pool2.shape[3]])
     dense = tf.layers.dense(inputs=pool2_flat, units=1024, activation=tf.nn.relu)
@@ -112,6 +112,7 @@ def load_train_photos(df):
             #TODO: this path isnt correct anymore. get the real path by trying the folders in 'data'
             #im_path = df.loc[i,['images']][0][0]['path']
             im_path = pr.get_image_path(i, df)
+            print("imgpath:", im_path)
             genre = df.loc[i,['top_genre']][0]
 
             image = cv2.imread(im_path)
@@ -141,6 +142,7 @@ def load_train_photos(df):
     # Transform to numpy array
     images = np.array(images)
     labels = np.array(labels)
+    print("imgleng:", images.shape)
 
 	# Return images and labels separating a validation sample
     idx = int(validation_size * images.shape[0])
@@ -148,6 +150,7 @@ def load_train_photos(df):
 
 def main(_):
     global batch_size, img_size
+    print(batch_size)
 
     file_path = FLAGS.json_file
 
@@ -171,7 +174,9 @@ def main(_):
     x_train, y_train, x_val, y_val = load_train_photos(df)
 
     # Check batch size is not too big, if so, going to have one flag
+
     if batch_size > x_train.shape[0]:
+        print( x_train.shape[0])
         batch_size = x_train.shape[0]
 
     # Number of iterations needed for one epoch

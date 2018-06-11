@@ -21,20 +21,8 @@ def read_goodreads(file_path):
     img_path_full = file_path + "\\full"
     img_path_thumbs_sm = file_path + "\\thumbs\\small"
     img_path_thumbs_bg = file_path + "\\thumbs\\big"
-    print(file_path)
     df = pd.read_json(file_path + ".jl", lines = True)
     return df
-
-ratings = [3.0, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9, 4.0, 4.1, 4.2, 4.3, 4.4, 4.5]
-"""
-This method should remove from the dataset all books not belonging to one of the ratings listed
-"""
-def clean_ratings(df):
-    df['avg_rating_this_edition'] = df['avg_rating_this_edition'].map(lambda x: round(x,1))
-    dfs = []
-    for rating in ratings:
-        dfs.append(df[df.avg_rating_this_edition == rating])
-    return pd.concat(dfs)
 
 
 def clean_description(df, store):
@@ -138,7 +126,7 @@ def filter_ratings(df):
 
 def get_image_path(i,df, full = True):
     """returns the image path to the ith entry of dataframe df"""
-    img_name= df.loc[i,['images']][0][0]['path'].split("/")[-1]
+    img_name= df.loc[df.index[i],['images']][0][0]['path'].split("/")[-1]
     folders = listdir("data")
     folders = [path.join("data", f) for f in folders]
     folders = [f for f in folders if path.isdir(f)]
